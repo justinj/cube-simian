@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/justinj/cube-simian/issues"
   },
-  "homepage": "https://github.com/justinj/cube-simian"
+  "homepage": "https://github.com/justinj/cube-simian",
+  "devDependencies": {
+    "mocha": "^2.2.4"
+  }
 }
