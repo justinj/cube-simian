@@ -1,0 +1,22 @@
+{
+  "name": "cube-simian",
+  "version": "0.0.1",
+  "description": "Heise sim keybindings helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:justinj/cube-simian.git"
+  },
+  "keywords": [
+    "rubik"
+  ],
+  "author": "Justin Jaffray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justinj/cube-simian/issues"
+  },
+  "homepage": "https://github.com/justinj/cube-simian"
+}
