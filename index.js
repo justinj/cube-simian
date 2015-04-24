@@ -28,7 +28,10 @@ var letterMappings = {
 };
 
 var letters_to_alg = function(sequence) {
-  return sequence.split("").map(function(key) { return letterMappings[key]; }).join(" ");
+  var keys = sequence.split("");
+  var relevantKeys = keys.filter(function(key) { return letterMappings.hasOwnProperty(key) });
+  var moves = relevantKeys.map(function(key) { return letterMappings[key]; });
+  return moves.join(" ");
 };
 
 module.exports = {

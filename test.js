@@ -7,4 +7,9 @@ describe("to_alg", function() {
     assert.equal(simian.letters_to_alg("k"), "R'")
     assert.equal(simian.letters_to_alg("ijk"), "R U R'")
   });
+
+  it("ignores letters it doesn't recognize", function() {
+    assert.equal(simian.letters_to_alg(","), "")
+    assert.equal(simian.letters_to_alg(",i,:''[[[][]jk"), "R U R'")
+  });
 });
