@@ -30,14 +30,14 @@ var letterMappings = {
 };
 
 var letters_to_alg = function(sequence) {
-  var keys = sequence.split("");
+  var keys = sequence.split("").map(function(key) { return key.toUpperCase() });
   var relevantKeys = keys.filter(function(key) { return letterMappings.hasOwnProperty(key) });
   var moves = relevantKeys.map(function(key) { return letterMappings[key]; });
   return alg.cube.simplify(moves.join(" "));
 };
 
 var keycode_to_move = function(keycode) {
-  return letterMappings[String.fromCharCode(keycode)];
+  return letterMappings[String.fromCharCode(keycode).toUpperCase()];
 };
 
 module.exports = {
