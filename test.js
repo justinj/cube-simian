@@ -22,7 +22,7 @@ describe("letters_to_alg", function() {
 describe("keycode_to_move", function() {
   it("goes from the e.which code to a move", function() {
     assert.equal(simian.keycode_to_move(73), "R");
-    assert.equal(simian.keycode_to_move(73), "R");
+    assert.equal(simian.keycode_to_move(105), "R");
   });
 
   it("returns null for missing moves", function() {
