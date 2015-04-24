@@ -37,7 +37,7 @@ var letters_to_alg = function(sequence) {
 };
 
 var keycode_to_move = function(keycode) {
-  return letterMappings[String.fromCharCode(keycode).toUpperCase()];
+  return letterMappings[String.fromCharCode(keycode).toUpperCase()] || null;
 };
 
 module.exports = {
