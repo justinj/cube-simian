@@ -1,6 +1,6 @@
 {
   "name": "cube-simian",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Heise sim keybindings helper",
   "main": "index.js",
   "scripts": {
