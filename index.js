@@ -1,39 +1,46 @@
+var alg = require("alg");
+
 var letterMappings = {
-  "i": "R",
-  "k": "R'",
-  "j": "U",
-  "f": "U'",
-  "d": "L",
-  "e": "L'",
-  "u": "Rw",
-  "m": "Rw'",
-  "v": "Lw",
-  "r": "Lw'",
-  "h": "F",
-  "g": "F'",
-  "s": "D",
-  "l": "D'",
+  "I": "R",
+  "K": "R'",
+  "J": "U",
+  "F": "U'",
+  "D": "L",
+  "E": "L'",
+  "U": "Rw",
+  "M": "Rw'",
+  "V": "Lw",
+  "R": "Lw'",
+  "H": "F",
+  "G": "F'",
+  "S": "D",
+  "L": "D'",
   ";": "y",
-  "a": "y'",
-  "w": "B",
-  "o": "B'",
-  "y": "x",
-  "t": "x",
-  "b": "x'",
-  "n": "x'",
-  "p": "z",
-  "q": "z'",
-  "z": "Uw",
-  "x": "Uw'"
+  "A": "y'",
+  "W": "B",
+  "O": "B'",
+  "Y": "x",
+  "T": "x",
+  "B": "x'",
+  "N": "x'",
+  "P": "z",
+  "Q": "z'",
+  "Z": "Uw",
+  "X": "Uw'"
 };
 
 var letters_to_alg = function(sequence) {
   var keys = sequence.split("");
   var relevantKeys = keys.filter(function(key) { return letterMappings.hasOwnProperty(key) });
   var moves = relevantKeys.map(function(key) { return letterMappings[key]; });
-  return moves.join(" ");
+  return alg.cube.simplify(moves.join(" "));
+};
+
+var keycode_to_move = function(keycode) {
+  return letterMappings[String.fromCharCode(keycode)];
 };
 
 module.exports = {
-  letters_to_alg: letters_to_alg
+  letters_to_alg: letters_to_alg,
+  keycode_to_move: keycode_to_move
 };
