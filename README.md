@@ -20,7 +20,7 @@ simian.letters_to_alg("ijkf") // => "R U R' U'"
 
 Example:
 ```javascript
-simian.letters_to_alg(73) // => "R"
+simian.keycode_to_move(73) // => "R"
 ```
 
 for when you have an event handler.
