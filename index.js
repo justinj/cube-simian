@@ -29,18 +29,18 @@ var letterMappings = {
   "X": "Uw'"
 };
 
-var letters_to_alg = function(sequence) {
+var lettersToAlg = function(sequence) {
   var keys = sequence.split("").map(function(key) { return key.toUpperCase() });
   var relevantKeys = keys.filter(function(key) { return letterMappings.hasOwnProperty(key) });
   var moves = relevantKeys.map(function(key) { return letterMappings[key]; });
   return alg.cube.simplify(moves.join(" "));
 };
 
-var keycode_to_move = function(keycode) {
+var keycodeToMove = function(keycode) {
   return letterMappings[String.fromCharCode(keycode).toUpperCase()] || null;
 };
 
 module.exports = {
-  letters_to_alg: letters_to_alg,
-  keycode_to_move: keycode_to_move
+  lettersToAlg: lettersToAlg,
+  keycodeToMove: keycodeToMove
 };

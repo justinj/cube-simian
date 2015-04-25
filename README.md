@@ -15,18 +15,18 @@ $ npm install --save cube-simian
 
 # API
 
-## `simian.letters_to_alg(<string>)`
+## `simian.lettersToAlg(<string>)`
 
 Example:
 ```javascript
-simian.letters_to_alg("ijkf") // => "R U R' U'"
+simian.lettersToAlg("ijkf") // => "R U R' U'"
 ```
 
-## `simian.keycode_to_move(<int>)`
+## `simian.keycodeToMove(<int>)`
 
 Example:
 ```javascript
-simian.keycode_to_move(73) // => "R"
+simian.keycodeToMove(73) // => "R"
 ```
 
 for when you have an event handler.
