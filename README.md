@@ -3,7 +3,8 @@ simian
 
 A library for making use of the common mappings for Rubik's Cube simulators.
 
-Notable examples of these mappings are [hi-games](http://hi-games.net/cube/),
+Notable examples of simulators which use the mappings this library is based off of are
+[hi-games](http://hi-games.net/cube/),
 [jflysim](http://jfly.cubing.net/jflysim/qqTimer.html), and
 [qcube](http://mzrg.com/js/qcube-v2.html).
 
