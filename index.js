@@ -33,7 +33,7 @@ var lettersToAlg = function(sequence) {
   var keys = sequence.split("").map(function(key) { return key.toUpperCase() });
   var relevantKeys = keys.filter(function(key) { return letterMappings.hasOwnProperty(key) });
   var moves = relevantKeys.map(function(key) { return letterMappings[key]; });
-  return alg.cube.simplify(moves.join(" "));
+  return alg.algToString(alg.coalesceBaseMoves(alg.parse(moves.join(" "))));
 };
 
 var keycodeToMove = function(keycode) {
